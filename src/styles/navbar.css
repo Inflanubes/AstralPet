@@ -3,9 +3,12 @@
   top: 0;
   left: 0;
   width: 100%;
+  height: 55px; /* Reducimos la altura del Navbar */
   transition: background-color 0.3s ease-in-out;
-  padding: 12px 24px;
   z-index: 50;
+  display: flex;
+  align-items: center;
+  padding: 8px 20px; /* Menos altura general */
 }
 
 .navbar-default {
@@ -22,20 +25,18 @@
   align-items: center;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
+  width: 100%;
 }
 
-/* Logo */
 .logo-container {
   display: flex;
   align-items: center;
-  gap: 8px;
-  margin-right: 40px; /* Espacio entre el logo y los links */
+  margin-right: 40px;
 }
 
 .logo {
-  height: 32px;
-  width: 32px;
+  height: 28px; /* Mantengo tu ajuste */
+  width: 28px;
 }
 
 .brand-name {
@@ -55,23 +56,14 @@
   color: white;
   cursor: pointer;
   text-decoration: none;
-  transition: color 0.2s;
+  transition: color 0.3s ease-in-out;
 }
 
 .menu-item:hover {
-  color: #bdbdff; /* Color lila en hover */
+  color: #bdbdff; /* Ahora cambia de color en hover */
 }
 
-/* Botón de contacto blanco con hover lila */
-.contact-button {
-  padding: 8px 16px;
-  border-radius: 9999px;
-  background-color: white;
-  color: black;
-  font-weight: 600;
-  text-decoration: none;
-  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
-}
+
 
 .contact-button:hover {
   background-color: #bdbdff;
@@ -118,6 +110,7 @@
   opacity: 0.8;
 }
 
+/* Responsivo */
 @media (max-width: 1024px) {
   .menu {
     display: none;

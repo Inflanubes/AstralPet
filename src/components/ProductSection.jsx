@@ -12,14 +12,14 @@ const steps = [
   {
     id: "02",
     title: "¿Qué incluye tu Carta Astral?",
-    text: "• Análisis de su carta natal y cómo influye en su comportamiento.\n• Características principales de su personalidad.\n• Consejos personalizados para mejorar su bienestar y comunicación.\n• Relación energética entre tú y tu mascota.\n• Documento digital detallado y personalizado.",
+    text: "\u2022 Análisis de su carta natal y cómo influye en su comportamiento.\n\u2022 Características principales de su personalidad.\n\u2022 Consejos personalizados para mejorar su bienestar y comunicación.\n\u2022 Relación energética entre tú y tu mascota.\n\u2022 Documento digital detallado y personalizado.",
     color: "bg-[#bdbdff]",
     textColor: "text-[#0e717d]",
   },
   {
     id: "03",
     title: "¿Por qué hacer una Carta Astral para tu mascota?",
-    text: "• Entenderás mejor su carácter y sus reacciones.\n• Podrás mejorar su bienestar con consejos específicos.\n• Fortalecerás tu vínculo con él/ella.\n• Descubrirás la misión especial que tiene en tu vida.",
+    text: "\u2022 Entenderás mejor su carácter y sus reacciones.\n\u2022 Podrás mejorar su bienestar con consejos específicos.\n\u2022 Fortalecerás tu vínculo con él/ella.\n\u2022 Descubrirás la misión especial que tiene en tu vida.",
     color: "bg-[#0b3c4a]",
     textColor: "text-white",
   },
@@ -36,7 +36,7 @@ export default function ProductSection() {
   const sectionRef = useRef(null);
   const cardsContainerRef = useRef(null);
   const [activeIndex, setActiveIndex] = useState(0);
-  const [isFixed, setIsFixed] = useState(false);
+  const [isTextFixed, setIsTextFixed] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -44,15 +44,24 @@ export default function ProductSection() {
 
       const sectionTop = sectionRef.current.getBoundingClientRect().top;
       const sectionBottom = sectionRef.current.getBoundingClientRect().bottom;
-      const containerHeight = cardsContainerRef.current.offsetHeight;
-      const viewportHeight = window.innerHeight;
+      const lastCard = cardsContainerRef.current.lastElementChild;
+      const lastCardBottom = lastCard.getBoundingClientRect().bottom;
 
-      if (sectionTop <= 0 && sectionBottom >= viewportHeight) {
-        setIsFixed(true);
-      } else {
-        setIsFixed(false);
+      // Fijar solo la parte del texto mientras haya tarjetas
+      if (sectionTop <= 0 && lastCardBottom > window.innerHeight) {
+        setIsTextFixed(true);
+      } 
+      // Cuando la última tarjeta llega arriba, desbloquear el texto
+      else if (lastCardBottom <= window.innerHeight) {
+        setIsTextFixed(false);
+      } 
+      // Si volvemos a hacer scroll arriba, permitir que se mueva el texto
+      else {
+        setIsTextFixed(false);
       }
 
+      // Calcular qué tarjeta está activa
+      const containerHeight = cardsContainerRef.current.offsetHeight;
       const index = Math.min(
         steps.length - 1,
         Math.max(0, Math.floor((-sectionTop / containerHeight) * steps.length))
@@ -65,8 +74,9 @@ export default function ProductSection() {
   }, []);
 
   return (
-    <section className={`product-section ${isFixed ? "fixed" : ""}`} ref={sectionRef}>
-      <div className="product-info">
+    <section ref={sectionRef} className="product-section">
+      {/* La parte izquierda (texto) ahora solo se fija cuando debe */}
+      <div className={`product-info ${isTextFixed ? "fixed-text" : ""}`}>
         <h2 className="title">Cómo adquirirla y en qué consiste.</h2>
         <p className="description">
           <strong>¿Cómo la consigo?</strong><br />
@@ -77,6 +87,8 @@ export default function ProductSection() {
         </p>
         <button className="cta">¡Pídela ya!</button>
       </div>
+
+      {/* Tarjetas, estas siguen su scroll normal */}
       <div className="cards-container" ref={cardsContainerRef}>
         {steps.map((step, index) => (
           <div
@@ -88,7 +100,7 @@ export default function ProductSection() {
               transform: `translateY(${Math.max(0, (activeIndex - index) * 100)}px)`,
               position: index === activeIndex ? "sticky" : "relative",
               top: index === activeIndex ? "120px" : "auto",
-              marginBottom: "50px",
+              marginBottom: "50px", 
               padding: "20px"
             }}
           >

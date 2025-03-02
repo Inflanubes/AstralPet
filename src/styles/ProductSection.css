@@ -2,55 +2,160 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    max-width: 1200px;
-    margin: auto;
-    padding: 50px 20px;
+    padding: 120px 5%;
     position: relative;
-  }
-  
-  .sticky {
-    position: sticky;
-    top: 0;
+    width: 100%;
     background-color: white;
-    z-index: 100;
-  }
-  
-  .product-info {
-    width: 50%;
-    padding-right: 40px;
-  }
-  
-  .cards-container {
+    transition: top 0.3s ease;
+}
+
+/* Se mantiene fija pero permite seguir haciendo scroll */
+.product-section.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    overflow: visible; /* Permite seguir haciendo scroll */
+}
+
+/* Cuando la última tarjeta está completamente visible, la sección deja de ser fija */
+.product-section.unfixed {
+    position: relative;
+}
+
+/* Asegura que la parte izquierda se mantenga visible */
+.product-info {
+    width: 40%;
+    position: sticky;
+    top: 100px;
+    margin-top: 40px;
+    text-align: left; /* Alineamos todo el contenido a la izquierda */
+}
+
+/* Contenedor de las tarjetas */
+.cards-container {
     width: 50%;
     display: flex;
     flex-direction: column;
-  }
-  
-  .card {
+    gap: 30px;
+    margin-top: 40px;
+}
+
+/* Estilos de cada tarjeta */
+.card {
     width: 475px;
     height: 395px;
-    padding: 20px;
-    margin-bottom: 50px;
     border-radius: 10px;
-    transition: transform 0.5s ease, opacity 0.5s ease;
-  }
-  
-  .opaque {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  
-  .translucent {
+    padding: 20px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
     opacity: 0.5;
-    transform: translateY(50px);
-  }
+    position: relative;
+    text-align: left; /* Alineamos el contenido de las tarjetas a la izquierda */
+}
 
-  .fixed-section {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background: white;
-    z-index: 10;
-  }
-  
-  
+/* Tarjetas activas (opacas cuando llegan a su lugar) */
+.card.opaque {
+    opacity: 1;
+}
+
+/* Animación de las tarjetas al desplazarse */
+.card.move-up {
+    transform: translateY(-100%);
+}
+
+/* La última tarjeta cuando llega, libera el scroll */
+.card.last-card {
+    position: relative;
+    z-index: 15;
+}
+
+/* Estilos de la numeración */
+.step-number {
+    font-size: 34px;
+    display: block;
+    margin-bottom: 133px;
+    font-weight: bold;
+    text-align: left; /* Aseguramos que el número también esté alineado a la izquierda */
+}
+
+/* Títulos de cada tarjeta */
+.step-title {
+    font-size: 34px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-align: left;
+}
+
+/* Texto dentro de cada tarjeta */
+.step-text {
+    font-size: 17px;
+    text-align: left;
+}
+
+/* Botón de llamada a la acción */
+.cta {
+    background-color: #0e717d;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+    text-align: left;
+}
+
+/* Cambio de color al pasar el mouse */
+.cta:hover {
+    background-color: #bdbdff;
+    color: black;
+}
+
+/* Ajuste de Responsive */
+@media (max-width: 1024px) {
+    .product-section {
+        flex-direction: column;
+        align-items: flex-start; /* Aseguramos que siga alineado a la izquierda */
+        padding: 50px 5%;
+    }
+
+    .product-info {
+        width: 90%;
+        position: relative;
+        top: auto;
+        margin-bottom: 40px;
+        text-align: left; /* Aseguramos que el texto no se centre */
+    }
+
+    .cards-container {
+        width: 100%;
+        align-items: flex-start;
+    }
+
+    .card {
+        width: 90%;
+        text-align: left;
+    }
+}
+
+@media (max-width: 768px) {
+    .product-section {
+        padding: 40px 5%;
+    }
+
+    .step-number {
+        font-size: 28px;
+        margin-bottom: 100px;
+        text-align: left;
+    }
+
+    .step-title {
+        font-size: 28px;
+        text-align: left;
+    }
+
+    .step-text {
+        font-size: 15px;
+        text-align: left;
+    }
+}

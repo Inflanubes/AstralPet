@@ -34,16 +34,6 @@ export default function Navbar() {
           <Link to="team" smooth duration={500} className="menu-item">Sobre nosotros</Link>
           <Link to="contact" smooth duration={500} className="menu-item">Contacto</Link>
         </div>
-
-        {/* Botón de contacto oculto en tablet y cuando el menú móvil está abierto */}
-        <div className="hidden lg:block">
-          {!menuOpen && (
-            <Link to="contact" smooth duration={500} className="contact-button">
-              Contact
-            </Link>
-          )}
-        </div>
-
         {/* Botón menú móvil */}
         <button className="menu-toggle md:hidden" onClick={() => setMenuOpen(!menuOpen)}>
           ☰
