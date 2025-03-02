@@ -23,11 +23,11 @@ export default function Navbar() {
       <div className="navbar-container">
         {/* Logo y nombre */}
         <div className="logo-container">
-          <img src="https://res.cloudinary.com/dflvexboa/image/upload/v1740919221/AstralPetWeb/ygr33a5lcszm6rexrnyx.png" alt="Logo" className="logo" />
+          <img src="https://res.cloudinary.com/dflvexboa/image/upload/v1740918138/AstralPetWeb/yloewrategn0lbhjik2w.png" alt="Logo" className="logo" />
           <span className="brand-name">ASTRALPET</span>
         </div>
 
-        {/* Menú de navegación */}
+        {/* Menú de navegación alineado a la izquierda */}
         <div className={`menu ${menuOpen ? "mobile-menu open" : "hidden md:flex"}`}>
           <Link to="home" smooth duration={500} className="menu-item">Home</Link>
           <Link to="about" smooth duration={500} className="menu-item">Qué es</Link>
@@ -35,10 +35,14 @@ export default function Navbar() {
           <Link to="contact" smooth duration={500} className="menu-item">Contacto</Link>
         </div>
 
-        {/* Botón de contacto */}
-        <Link to="contact" smooth duration={500} className="contact-button hidden md:block">
-          Contact
-        </Link>
+        {/* Botón de contacto oculto en tablet y cuando el menú móvil está abierto */}
+        <div className="hidden lg:block">
+          {!menuOpen && (
+            <Link to="contact" smooth duration={500} className="contact-button">
+              Contact
+            </Link>
+          )}
+        </div>
 
         {/* Botón menú móvil */}
         <button className="menu-toggle md:hidden" onClick={() => setMenuOpen(!menuOpen)}>
@@ -48,3 +52,5 @@ export default function Navbar() {
     </nav>
   );
 }
+
+
