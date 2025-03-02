@@ -1,7 +1,7 @@
 .hero {
     position: relative;
     width: 100%;
-    height: 100vh;
+    height: 859px; /* Ajuste del alto a 859px */
     background-image: url("https://res.cloudinary.com/dflvexboa/image/upload/v1740919151/AstralPetWeb/oewmxgqwvutjjvrmu3vv.jpg");
     background-size: cover;
     background-position: center;
@@ -10,6 +10,7 @@
     align-items: center;
     justify-content: flex-start;
     padding: 0 10%;
+    overflow: hidden; /* Evita que el texto se salga */
   }
   
   .overlay {
@@ -18,42 +19,42 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.38); /* Superposición negra con 38% de opacidad */
+    background-color: rgba(0, 0, 0, 0.45); /* Mayor opacidad en la superposición */
   }
   
   .hero-content {
     position: relative;
     z-index: 2;
-    max-width: 600px;
+    max-width: 700px; /* Hace que el texto sea más ancho */
     color: white;
+    display: flex;
+    flex-direction: column;
   }
   
   .hero-content h1 {
-    font-size: 3rem;
+    font-size: 5vw; /* Tamaño adaptable al ancho de la pantalla */
     font-weight: bold;
     line-height: 1.2;
+    max-width: 700px; /* Ajuste del ancho del h1 */
   }
   
   .hero-content .highlight {
     color: #37b8be;
   }
   
-  .hero-content p {
-    font-size: 1.2rem;
-    margin-top: 10px;
-  }
-  
   .cta-button {
     display: inline-block;
     margin-top: 20px;
-    padding: 12px 24px;
+    padding: 8px 16px; /* Ajuste al tamaño del texto */
     background-color: white;
     color: black;
     font-weight: bold;
     border-radius: 50px;
     text-decoration: none;
-    font-size: 1.2rem;
+    font-size: 1rem; /* Tamaño del texto ajustado */
     transition: background-color 0.3s, color 0.3s;
+    text-align: center;
+    width: fit-content; /* Ajusta el ancho del botón al texto */
   }
   
   .cta-button:hover {
@@ -63,5 +64,27 @@
   
   .cta-arrow {
     margin-left: 10px;
+  }
+  
+  .hero-content p {
+    font-size: 1.2rem;
+    margin-top: 40px; /* Espaciado ahora está entre el botón y el texto explicativo */
+  }
+  
+  @media (max-width: 768px) {
+    .hero {
+      justify-content: center;
+      text-align: center;
+      padding: 0 5%;
+      height: auto; /* Para que en móviles se adapte sin cortar contenido */
+    }
+    
+    .hero-content {
+      max-width: 90%; /* Ajuste para móviles */
+    }
+    
+    .hero-content h1 {
+      font-size: 7vw; /* Escala proporcionalmente en pantallas pequeñas */
+    }
   }
   
