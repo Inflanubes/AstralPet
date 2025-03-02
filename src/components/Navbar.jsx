@@ -23,7 +23,7 @@ export default function Navbar() {
       <div className="navbar-container">
         {/* Logo y nombre */}
         <div className="logo-container">
-          <img src="https://res.cloudinary.com/dflvexboa/image/upload/v1740918138/AstralPetWeb/yloewrategn0lbhjik2w.png" alt="Logo" className="logo" />
+          <img src="https://res.cloudinary.com/dflvexboa/image/upload/v1740919221/AstralPetWeb/ygr33a5lcszm6rexrnyx.png" alt="Logo" className="logo" />
           <span className="brand-name">ASTRALPET</span>
         </div>
 

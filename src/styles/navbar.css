@@ -22,8 +22,10 @@
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
+    padding: 0 20px;
   }
   
+  /* Logo */
   .logo-container {
     display: flex;
     align-items: center;
@@ -41,7 +43,9 @@
     font-size: 18px;
   }
   
+  /* Menú alineado a la izquierda */
   .menu {
+    margin-left: auto;
     display: flex;
     gap: 24px;
   }
@@ -54,21 +58,23 @@
   }
   
   .menu-item:hover {
-    color: #bdbdff; /* Lila en hover */
+    color: #bdbdff; /* Color lila en hover */
   }
   
+  /* Botón de contacto blanco con hover lila */
   .contact-button {
     padding: 8px 16px;
     border-radius: 9999px;
-    background-color: #bdbdff;
+    background-color: white;
     color: black;
     font-weight: 600;
     text-decoration: none;
-    transition: opacity 0.3s ease-in-out;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
   }
   
   .contact-button:hover {
-    opacity: 0.8;
+    background-color: #bdbdff;
+    color: white;
   }
   
   /* Estilos para menú móvil */
@@ -109,4 +115,5 @@
   .mobile-menu .menu-item:hover {
     opacity: 0.8;
   }
+  
   
