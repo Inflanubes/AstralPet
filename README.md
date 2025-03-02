@@ -1,14 +1,12 @@
-# AstralPet
-Sitio web de Astralpet, desarrollado con React y TailwindCSS.
+# React + Vite
 
-## 📌 Características
-🐾 Navbar fijo con cambio de color al hacer scroll.  
-🐾 Navegación interna con scroll suave.  
-🐾 Estilos separados en CSS.  
-🐾 Diseño responsive.  
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## 🚀 Instalación y ejecución
+Currently, two official plugins are available:
 
-1. Clona este repositorio:
-   ```bash
-   git clone https://github.com/TU-USUARIO/astralpet-website.git
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+## Expanding the ESLint configuration
+
+If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
