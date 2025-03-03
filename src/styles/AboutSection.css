@@ -26,14 +26,15 @@
     font-weight: bold;
     text-transform: uppercase;
     color: black;
-    margin-bottom: 20px;
+    margin-bottom: 0%;
 }
 
 .about-text {
-    font-size: 18px;
+    font-size: 32px;
     line-height: 1.6;
     color: black;
     margin-bottom: 20px;
+    margin-top: 0%;
 }
 
 .about-button {
@@ -62,7 +63,7 @@
         padding: 30px 5%;
     }
     .about-text {
-        font-size: 16px;
+        font-size: 32px;
     }
 }
 
@@ -73,9 +74,10 @@
     }
     .about-content {
         padding: 20px 5%;
+        margin-left: 10%;
     }
     .about-text {
-        font-size: 14px;
+        font-size: 29px;
     }
     .about-button {
         padding: 10px 20px;
