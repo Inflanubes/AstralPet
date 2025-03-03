@@ -1,16 +1,24 @@
 
 
+html, body {
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 .product-section {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    padding: 120px 5%;
+    padding:  5%;
     position: relative;
     width: 100%;
     background-color: white;
     transition: top 0.3s ease;
-    border-radius: 30px !important;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 /* Se mantiene fija pero permite seguir haciendo scroll */
@@ -34,12 +42,13 @@
     position: sticky;
     top: 100px;
     margin-top: 40px;
+    margin-left: 20px;
     text-align: left; /* Alineamos todo el contenido a la izquierda */
 }
 
 /* Contenedor de las tarjetas */
 .cards-container {
-    width: 50%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     gap: 30px;
@@ -50,18 +59,20 @@
 
 /* Estilos de cada tarjeta */
 .card {
-    width: 475px;
+    max-width: 475px;
+    width: 100%;
     height: 395px;
     border-radius: 10px;
-    padding: 20px;
+    padding: 30px;
     transition: transform 0.3s ease, opacity 0.3s ease;
     opacity: 0.5;
     position: relative;
-    text-align: left; /* Alineamos el contenido de las tarjetas a la izquierda */
+    text-align: left;
     overflow: hidden;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    margin: 0 auto;
 }
 
 /* Tarjetas activas (opacas cuando llegan a su lugar) */
@@ -120,7 +131,7 @@
 
 /* Texto dentro de cada tarjeta */
 .step-text {
-    font-size: 17px;
+    font-size: 100%;
     text-align: left;
     flex-grow: 1; /* Permite que el texto use todo el espacio disponible */
     overflow: hidden;
@@ -191,7 +202,7 @@
     }
 
     .card {
-        width: 90%;
+        width: 100%;
         text-align: left;
     }
 }
@@ -199,6 +210,9 @@
 @media (max-width: 768px) {
     .product-section {
         padding: 40px 5%;
+    }
+    .card {
+        max-width: 85%;
     }
 
     .step-number {
@@ -215,5 +229,23 @@
     .step-text {
         font-size: 15px;
         text-align: left;
+    }
+}
+
+@media (max-width: 425px) {
+    .step-number {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 375px) {
+    .step-number {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 320px) {
+    .step-number {
+        margin-bottom: 20px;
     }
 }
