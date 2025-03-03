@@ -73,11 +73,12 @@
         height: 300px;
     }
     .about-content {
-        padding: 20px 5%;
-        margin-left: 10%;
+  
+        margin-left: 20%;
     }
     .about-text {
         font-size: 29px;
+        margin-right: 30%;
     }
     .about-button {
         padding: 10px 20px;
