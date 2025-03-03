@@ -35,7 +35,7 @@ export default function Navbar() {
           <Link to="contact" smooth duration={500} className="menu-item">Contacto</Link>
         </div>
         {/* Botón menú móvil */}
-        <button className="menu-toggle md:hidden" onClick={() => setMenuOpen(!menuOpen)}>
+        <button className="menu-toggle md:hidden"  onClick={() => setMenuOpen(!menuOpen)}>
           ☰
         </button>
       </div>

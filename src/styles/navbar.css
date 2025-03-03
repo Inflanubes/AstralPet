@@ -2,13 +2,13 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 100vw;
   height: 55px; /* Reducimos la altura del Navbar */
   transition: background-color 0.3s ease-in-out;
-  z-index: 50;
+  z-index: 10;
   display: flex;
   align-items: center;
-  padding: 8px 20px; /* Menos altura general */
+  margin: 0 auto; 
 }
 
 .navbar-default {
@@ -32,12 +32,13 @@
   display: flex;
   align-items: center;
   margin-right: 40px;
+  height: 45px;
 }
 
 .logo {
-  height: 28px; /* Mantengo tu ajuste */
-  width: 28px;
+  max-height: 100%;
 }
+
 
 .brand-name {
   color: white;
@@ -75,15 +76,20 @@
   background: none;
   border: none;
   cursor: pointer;
-  padding: 8px;
+  padding: 10px;
   font-size: 24px;
   display: none;
+  display: block;
+  position: absolute;
+  right: 20px;
+  color: white;
 }
 
 .mobile-menu {
   position: absolute;
   top: 60px;
   left: 0;
+  right: 0;
   width: 100%;
   background-color: rgba(14, 65, 86, 0.95);
   display: flex;
