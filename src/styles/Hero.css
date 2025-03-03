@@ -49,12 +49,20 @@
   margin-top: 20px;
   margin-bottom: 30px;
   padding: 8px 16px;
-  background-color: white;
-  color: black;
+  background-color: white !important;
+  color: black !important;
   font-weight: bold;
   border-radius: 50px;
   text-decoration: none;
   font-size: 1rem;
-  transition: background-color 0.3s, color 0.3s;
-  text-align: c
+  transition: background-color 0.3s, color 0.3s, width 0.3s, padding 0.3s;
+  text-align: center;
+  width: fit-content; /* Ajusta el ancho al tamaño del texto */
+  white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+  @apply inline-block mt-5 mb-7 px-4 py-2 bg-white text-black font-bold rounded-full text-lg transition-all duration-300 hover:bg-[#bdbdff] hover:text-white;
+}
+
+.cta-button:hover {
+  background-color: #bdbdff !important;
+  color: white !important;
 }

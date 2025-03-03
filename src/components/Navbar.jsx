@@ -30,7 +30,7 @@ export default function Navbar() {
         {/* Menú de navegación alineado a la izquierda */}
         <div className={`menu ${menuOpen ? "mobile-menu open" : "hidden md:flex"}`}>
           <Link to="home" smooth duration={500} className="menu-item">Home</Link>
-          <Link to="about" smooth duration={500} className="menu-item">Qué es</Link>
+          <Link to="about" smooth duration={500} className="menu-item">Producto</Link>
           <Link to="team" smooth duration={500} className="menu-item">Sobre nosotros</Link>
           <Link to="contact" smooth duration={500} className="menu-item">Contacto</Link>
         </div>

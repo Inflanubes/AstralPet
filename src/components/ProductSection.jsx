@@ -12,14 +12,14 @@ const steps = [
   {
     id: "02",
     title: "¿Qué incluye tu Carta Astral?",
-    text: "\u2022 Análisis de su carta natal y cómo influye en su comportamiento.\n\u2022 Características principales de su personalidad.\n\u2022 Consejos personalizados para mejorar su bienestar y comunicación.\n\u2022 Relación energética entre tú y tu mascota.\n\u2022 Documento digital detallado y personalizado.",
+    text: "Análisis de su carta natal y cómo influye en su comportamiento, características principales de su personalidad, consejos personalizados para mejorar su bienestar y comunicación, relación energética entre tú y tu mascota.",
     color: "bg-[#bdbdff]",
     textColor: "text-[#0e717d]",
   },
   {
     id: "03",
     title: "¿Por qué hacer una Carta Astral para tu mascota?",
-    text: "\u2022 Entenderás mejor su carácter y sus reacciones.\n\u2022 Podrás mejorar su bienestar con consejos específicos.\n\u2022 Fortalecerás tu vínculo con él/ella.\n\u2022 Descubrirás la misión especial que tiene en tu vida.",
+    text: "Entenderás mejor su carácter y sus reacciones, podrás mejorar su bienestar con consejos específicos, fortalecerás tu vínculo con él/ella, descubrirás la misión especial que tiene en tu vida.",
     color: "bg-[#0b3c4a]",
     textColor: "text-white",
   },
@@ -74,10 +74,11 @@ export default function ProductSection() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="product-section">
+    <section ref={sectionRef} className="product-section bg-white rounded-3xl">
       {/* La parte izquierda (texto) ahora solo se fija cuando debe */}
       <div className={`product-info ${isTextFixed ? "fixed-text" : ""}`}>
-        <h2 className="title">Cómo adquirirla y en qué consiste.</h2>
+        <p className="section-subtitle">CARTA ASTRAL</p> 
+        <p className="title">Cómo adquirirla y en qué consiste.</p>
         <p className="description">
           <strong>¿Cómo la consigo?</strong><br />
           Tras realizar la compra recibirás un enlace al formulario donde ingresarás los datos de tu mascota. Una vez completado, recibirás en tu email el documento digital con la carta astral de tu mascota.
@@ -96,7 +97,7 @@ export default function ProductSection() {
             className={`card ${step.color} ${step.textColor} ${index === activeIndex ? "opaque" : "translucent"}`}
             style={{
               width: "475px",
-              height: "395px",
+              height: "290px",
               transform: `translateY(${Math.max(0, (activeIndex - index) * 100)}px)`,
               position: index === activeIndex ? "sticky" : "relative",
               top: index === activeIndex ? "120px" : "auto",
@@ -104,8 +105,8 @@ export default function ProductSection() {
               padding: "20px"
             }}
           >
-            <span className="step-number" style={{ fontSize: "34px", marginBottom: "133px" }}>{step.id}</span>
-            <h3 className="step-title" style={{ fontSize: "34px", marginBottom: "20px" }}>{step.title}</h3>
+            <span className="step-number" style={{ fontSize: "34px", marginBottom: "80px" }}>{step.id}</span>
+            <h3 className="step-title" style={{ fontSize: "20px"}}>{step.title}</h3>
             <p className="step-text" style={{ fontSize: "17px" }}>{step.text}</p>
           </div>
         ))}

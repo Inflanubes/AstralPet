@@ -1,3 +1,5 @@
+
+
 .product-section {
     display: flex;
     justify-content: space-between;
@@ -7,6 +9,8 @@
     width: 100%;
     background-color: white;
     transition: top 0.3s ease;
+    border-radius: 30px !important;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 /* Se mantiene fija pero permite seguir haciendo scroll */
@@ -40,7 +44,9 @@
     flex-direction: column;
     gap: 30px;
     margin-top: 40px;
+    border-radius: 20px;
 }
+
 
 /* Estilos de cada tarjeta */
 .card {
@@ -52,6 +58,10 @@
     opacity: 0.5;
     position: relative;
     text-align: left; /* Alineamos el contenido de las tarjetas a la izquierda */
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 /* Tarjetas activas (opacas cuando llegan a su lugar) */
@@ -70,11 +80,31 @@
     z-index: 15;
 }
 
+/* Estilos de colores de las tarjetas */
+.card:nth-child(1) {
+    background-color: #2b9595;
+    color: white;
+}
+
+.card:nth-child(2) {
+    background-color: #bdbdff;
+    color: black;
+}
+
+.card:nth-child(3) {
+    background-color: #0e4156;
+    color: white;
+}
+
+.card:nth-child(4) {
+    background-color: #cf8b2e;
+    color: black;
+}
+
 /* Estilos de la numeración */
 .step-number {
     font-size: 34px;
     display: block;
-    margin-bottom: 133px;
     font-weight: bold;
     text-align: left; /* Aseguramos que el número también esté alineado a la izquierda */
 }
@@ -82,15 +112,29 @@
 /* Títulos de cada tarjeta */
 .step-title {
     font-size: 34px;
-    margin-bottom: 20px;
+    margin-top: 20px;
     font-weight: bold;
     text-align: left;
+    margin-bottom: 6px;
 }
 
 /* Texto dentro de cada tarjeta */
 .step-text {
     font-size: 17px;
     text-align: left;
+    flex-grow: 1; /* Permite que el texto use todo el espacio disponible */
+    overflow: hidden;
+    margin-top: 0;
+    text-overflow: ellipsis; /* Añade "..." si el texto se corta */
+    display: -webkit-box;
+    -webkit-line-clamp: 6; /* Limita a 5 líneas */
+    -webkit-box-orient: vertical;
+}
+
+.description {
+    margin-bottom: 20px; /* Ajusta el espacio entre los párrafos */
+    font-size: 17px; /* Mantiene la legibilidad */
+    line-height: 1.6; /* Espaciado entre líneas para mayor claridad */
 }
 
 /* Botón de llamada a la acción */
@@ -109,6 +153,20 @@
 .cta:hover {
     background-color: #bdbdff;
     color: black;
+}
+
+.section-subtitle {
+    font-size: 24px; /* Ajusta el tamaño para que sea menor que el h2 */
+    font-weight: bold; /* Aplica negrita */
+    text-transform: uppercase; /* Mayúsculas para mayor impacto */
+    margin-bottom: 0px; /* Espacio entre el subtítulo y el título */
+}
+
+.title {
+    font-size: 43px; /* Ajuste al tamaño solicitado */
+    line-height: 1.3; /* Mejora la legibilidad */
+    margin-bottom: 50px; /* Añade espacio después del título */
+    margin-top: 0%;
 }
 
 /* Ajuste de Responsive */

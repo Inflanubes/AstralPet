@@ -60,7 +60,7 @@
 }
 
 .menu-item:hover {
-  color: #bdbdff; /* Ahora cambia de color en hover */
+  color: #bdbdff !important; /* Ahora cambia de color en hover */
 }
 
 
