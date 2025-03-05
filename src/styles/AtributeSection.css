@@ -1,0 +1,158 @@
+html, body {
+    width: 100%;
+    max-width: 100vw;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+  
+  /* --- Estilos de la parte blanca --- */
+  .white-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Cambia 'center' por 'flex-start' */
+    background-color: white;
+    padding: 40px 10%;
+}
+
+.section-main-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    margin-left: 5%;
+    text-transform: uppercase;
+    text-align: left;
+}
+  
+  .info-blocks-container {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+  }
+  
+  .info-block {
+    text-align: center;
+    max-width: 300px;
+  }
+  
+  .info-block .icon {
+    font-size: 2.5rem;
+    color: #bdbdff;
+    margin-bottom: 10px;
+  }
+  
+  .info-block h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .info-block p {
+    font-size: 1rem;
+    color: #444;
+  }
+  
+  /* --- Estilos de la parte lila --- */
+  .purple-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #bdbdff;
+    padding: 40px 10%;
+  }
+  
+  .left h2 {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+  .right {
+    max-width: 400px;
+  }
+  
+  /* --- Botón con efecto hover --- */
+  .cta-button {
+    background-color: white;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .cta-button:hover {
+    background-color: white !important;
+    color: #bdbdff !important;
+  }
+
+  /* --- RESPONSIVE DESIGN --- */
+
+/* 📌 Para pantallas de 768px o menos (tablets y móviles) */
+@media (max-width: 768px) {
+    
+    /* 🔹 La parte blanca: apilar los info-blocks */
+    .info-blocks-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px; /* Espaciado entre elementos */
+    }
+
+    .info-block {
+        max-width: 100%; /* Ocupar todo el ancho disponible */
+        text-align: center;
+    }
+
+    /* 🔹 La parte morada: colocar left arriba de right */
+    .purple-section {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+
+    .left {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .right {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .cta-button {
+        width: auto;
+    }
+}
+
+/* 📌 Para pantallas de 480px o menos (móviles pequeños) */
+@media (max-width: 480px) {
+    
+    .section-main-title {
+        font-size: 1rem; /* Reduce el tamaño del título */
+    }
+
+    .info-block .icon {
+        font-size: 2rem; /* Reduce los iconos */
+    }
+
+    .left h2 {
+        font-size: 1.5rem; /* Ajustar el tamaño del título en la parte morada */
+    }
+
+    .cta-button {
+        font-size: 0.7rem;  /* Reduce el tamaño de la fuente */
+        padding: 5px 10px;  /* Reduce el padding */
+        width: 25%; /* Hace que el botón tenga la mitad del ancho actual */
+        max-width: 150px; /* Limita el tamaño máximo */
+    }
+}
+
+  
