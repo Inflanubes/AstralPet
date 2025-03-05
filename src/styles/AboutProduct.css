@@ -1,0 +1,106 @@
+html, body {
+    width: 100%;
+
+}
+
+.new-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: relative;
+    width: 100vw; /* Ocupa toda la pantalla */
+    background-color: white;
+    max-width: none; /* Elimina la restricción de 1200px */
+    margin: 0; /* Elimina el margen izquierdo que desplazaba la sección */
+    padding: 0 3vw; /* Reduce el espacio interno para minimizar el margen izquierdo de la imagen */
+    z-index: 1;
+}
+
+.left-content {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.text-content {
+    width: 100%;
+    text-align: left;
+    position: sticky;
+    top: 80px;
+    z-index: 2;
+    background-color: white;
+    margin-top: 10%;
+}
+
+.section-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 0px;
+    word-spacing: -3px;
+}
+
+.section-subtitle {
+    font-size: 40px;
+    margin-bottom: 0px;
+    margin-top: 0%;
+    font-weight: normal;
+    word-spacing: -2px;
+}
+
+.cardsa-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Reduce el espacio entre las tarjetas */
+    margin-top: 40px; /* Agrega espacio arriba antes de la primera tarjeta */
+    margin-bottom: 0px;
+}
+
+.carda {
+    width: 100%;
+    border-radius: 10px;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    position: relative;
+    opacity: 0;
+    width: 600px;
+    text-align: center;
+    margin-bottom: 5px; /* Reduce el espacio adicional entre tarjetas */
+}
+
+.carda.active {
+    opacity: 1;
+    margin-bottom: 5px;
+    width: 400px;
+    text-align: left;
+}
+
+.carda h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 2%;
+}
+
+.carda p {
+    font-size: 17px;
+    color: black;
+    margin-top: 0%;
+}
+
+.right-content {
+    width: 100%;
+    position: sticky;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-left: 0; /* Asegura que no haya margen adicional */
+    background-image: url("https://res.cloudinary.com/dflvexboa/image/upload/v1741198507/AstralPetWeb/hcjxofg15mtbpxjb0nph.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.fixed-image img {
+    display: none; /* Oculta la imagen para usar solo el fondo */
+}
