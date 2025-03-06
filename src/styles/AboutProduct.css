@@ -3,7 +3,7 @@ html, body {
 
 }
 
-.new-section {
+.about-product-section {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -103,4 +103,28 @@ html, body {
 
 .fixed-image img {
     display: none; /* Oculta la imagen para usar solo el fondo */
+}
+
+@media (max-width: 768px) {
+    .new-section {
+        flex-direction: column-reverse; /* Invierte el orden */
+        align-items: center; /* Centra el contenido */
+    }
+
+    .left-content {
+        width: 100%; /* Asegura que ocupe todo el ancho */
+        order: 2; /* Lo coloca después */
+        text-align: center; /* Alinea el texto */
+    }
+
+    .right-content {
+        width: 100%; /* Se ajusta al ancho */
+        height: auto; /* Evita problemas con el tamaño */
+        order: 1; /* Lo coloca antes */
+    }
+
+    .fixed-image img {
+        width: 100%; /* Hace que la imagen cubra el contenedor */
+        height: auto; /* Mantiene la proporción */
+    }
 }

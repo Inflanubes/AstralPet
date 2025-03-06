@@ -1,24 +1,14 @@
-
-
-html, body {
-    width: 100%;
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
 .product-section {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    padding:  5%;
+    padding: 120px 5%;
     position: relative;
     width: 100%;
     background-color: white;
     transition: top 0.3s ease;
+    border-radius: 30px !important;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    max-width: 1200px;
-    margin: 0 auto;
 }
 
 /* Se mantiene fija pero permite seguir haciendo scroll */
@@ -30,6 +20,7 @@ html, body {
     z-index: 10;
     overflow: visible; /* Permite seguir haciendo scroll */
 }
+
 
 /* Cuando la última tarjeta está completamente visible, la sección deja de ser fija */
 .product-section.unfixed {
@@ -43,12 +34,12 @@ html, body {
     top: 100px;
     margin-top: 40px;
     margin-left: 20px;
-    text-align: left; /* Alineamos todo el contenido a la izquierda */
+    text-align: left;
+    transition: top 0.3s ease-in-out;
 }
-
 /* Contenedor de las tarjetas */
 .cards-container {
-    width: 100%;
+    width: 50%;
     display: flex;
     flex-direction: column;
     gap: 30px;
@@ -59,20 +50,18 @@ html, body {
 
 /* Estilos de cada tarjeta */
 .card {
-    max-width: 475px;
-    width: 100%;
+    width: 475px;
     height: 395px;
     border-radius: 10px;
-    padding: 30px;
+    padding: 20px;
     transition: transform 0.3s ease, opacity 0.3s ease;
     opacity: 0.5;
     position: relative;
-    text-align: left;
+    text-align: left; /* Alineamos el contenido de las tarjetas a la izquierda */
     overflow: hidden;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin: 0 auto;
 }
 
 /* Tarjetas activas (opacas cuando llegan a su lugar) */
@@ -116,6 +105,7 @@ html, body {
 .step-number {
     font-size: 34px;
     display: block;
+
     font-weight: bold;
     text-align: left; /* Aseguramos que el número también esté alineado a la izquierda */
 }
@@ -131,7 +121,7 @@ html, body {
 
 /* Texto dentro de cada tarjeta */
 .step-text {
-    font-size: 100%;
+    font-size: 17px;
     text-align: left;
     flex-grow: 1; /* Permite que el texto use todo el espacio disponible */
     overflow: hidden;
@@ -202,7 +192,7 @@ html, body {
     }
 
     .card {
-        width: 100%;
+        width: 90%;
         text-align: left;
     }
 }
@@ -210,9 +200,6 @@ html, body {
 @media (max-width: 768px) {
     .product-section {
         padding: 40px 5%;
-    }
-    .card {
-        max-width: 85%;
     }
 
     .step-number {
@@ -229,23 +216,5 @@ html, body {
     .step-text {
         font-size: 15px;
         text-align: left;
-    }
-}
-
-@media (max-width: 425px) {
-    .step-number {
-        margin-bottom: 20px;
-    }
-}
-
-@media (max-width: 375px) {
-    .step-number {
-        margin-bottom: 20px;
-    }
-}
-
-@media (max-width: 320px) {
-    .step-number {
-        margin-bottom: 20px;
     }
 }

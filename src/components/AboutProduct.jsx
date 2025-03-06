@@ -36,7 +36,6 @@ export default function AboutProduct() {
 
   useEffect(() => {
     const handleScroll = () => {
-      console.log("Scrolling...");
 
       if (!sectionRef.current || !cardsaContainerRef.current) return;
   
@@ -58,12 +57,7 @@ export default function AboutProduct() {
       if (index === steps.length - 1) {
         index = steps.length; // Permitir que todas las tarjetas sean visibles
       }
-      
-      console.log("Section Top:", sectionTop);
-      console.log("Last Card Bottom:", lastCardBottom);
-      console.log("Container Height:", containerHeight);
-      console.log("New Active Index:", index);
-      console.log("Scroll Progress:", scrollProgress);
+    
   
       setActiveIndex(index);
     };
@@ -73,7 +67,7 @@ export default function AboutProduct() {
   }, []);
   
   return (
-    <section ref={sectionRef} className="new-section">
+    <section ref={sectionRef} className="about-product-section">
       <div className="left-content">
         <div className={`text-content ${isSticky ? "sticky" : ""}`}>
           <h2 className="section-title">¿QUÉ TIENE LA CARTA ASTRAL?</h2>
