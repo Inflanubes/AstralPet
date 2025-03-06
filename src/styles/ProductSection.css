@@ -1,0 +1,220 @@
+.product-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 120px 5%;
+    position: relative;
+    width: 100%;
+    background-color: white;
+    transition: top 0.3s ease;
+    border-radius: 30px !important;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Se mantiene fija pero permite seguir haciendo scroll */
+.product-section.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    overflow: visible; /* Permite seguir haciendo scroll */
+}
+
+
+/* Cuando la última tarjeta está completamente visible, la sección deja de ser fija */
+.product-section.unfixed {
+    position: relative;
+}
+
+/* Asegura que la parte izquierda se mantenga visible */
+.product-info {
+    width: 40%;
+    position: sticky;
+    top: 100px;
+    margin-top: 40px;
+    margin-left: 20px;
+    text-align: left;
+    transition: top 0.3s ease-in-out;
+}
+/* Contenedor de las tarjetas */
+.cards-container {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 40px;
+    border-radius: 20px;
+}
+
+
+/* Estilos de cada tarjeta */
+.card {
+    width: 475px;
+    height: 395px;
+    border-radius: 10px;
+    padding: 20px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 0.5;
+    position: relative;
+    text-align: left; /* Alineamos el contenido de las tarjetas a la izquierda */
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Tarjetas activas (opacas cuando llegan a su lugar) */
+.card.opaque {
+    opacity: 1;
+}
+
+/* Animación de las tarjetas al desplazarse */
+.card.move-up {
+    transform: translateY(-100%);
+}
+
+/* La última tarjeta cuando llega, libera el scroll */
+.card.last-card {
+    position: relative;
+    z-index: 15;
+}
+
+/* Estilos de colores de las tarjetas */
+.card:nth-child(1) {
+    background-color: #2b9595;
+    color: white;
+}
+
+.card:nth-child(2) {
+    background-color: #bdbdff;
+    color: black;
+}
+
+.card:nth-child(3) {
+    background-color: #0e4156;
+    color: white;
+}
+
+.card:nth-child(4) {
+    background-color: #cf8b2e;
+    color: black;
+}
+
+/* Estilos de la numeración */
+.step-number {
+    font-size: 34px;
+    display: block;
+
+    font-weight: bold;
+    text-align: left; /* Aseguramos que el número también esté alineado a la izquierda */
+}
+
+/* Títulos de cada tarjeta */
+.step-title {
+    font-size: 34px;
+    margin-top: 20px;
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: 6px;
+}
+
+/* Texto dentro de cada tarjeta */
+.step-text {
+    font-size: 17px;
+    text-align: left;
+    flex-grow: 1; /* Permite que el texto use todo el espacio disponible */
+    overflow: hidden;
+    margin-top: 0;
+    text-overflow: ellipsis; /* Añade "..." si el texto se corta */
+    display: -webkit-box;
+    -webkit-line-clamp: 6; /* Limita a 5 líneas */
+    -webkit-box-orient: vertical;
+}
+
+.description {
+    margin-bottom: 20px; /* Ajusta el espacio entre los párrafos */
+    font-size: 17px; /* Mantiene la legibilidad */
+    line-height: 1.6; /* Espaciado entre líneas para mayor claridad */
+}
+
+/* Botón de llamada a la acción */
+.cta {
+    background-color: #0e717d;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+    text-align: left;
+}
+
+/* Cambio de color al pasar el mouse */
+.cta:hover {
+    background-color: #bdbdff;
+    color: black;
+}
+
+.section-subtitle {
+    font-size: 24px; /* Ajusta el tamaño para que sea menor que el h2 */
+    font-weight: bold; /* Aplica negrita */
+    text-transform: uppercase; /* Mayúsculas para mayor impacto */
+    margin-bottom: 0px; /* Espacio entre el subtítulo y el título */
+}
+
+.title {
+    font-size: 43px; /* Ajuste al tamaño solicitado */
+    line-height: 1.3; /* Mejora la legibilidad */
+    margin-bottom: 50px; /* Añade espacio después del título */
+    margin-top: 0%;
+}
+
+/* Ajuste de Responsive */
+@media (max-width: 1024px) {
+    .product-section {
+        flex-direction: column;
+        align-items: flex-start; /* Aseguramos que siga alineado a la izquierda */
+        padding: 50px 5%;
+    }
+
+    .product-info {
+        width: 90%;
+        position: relative;
+        top: auto;
+        margin-bottom: 40px;
+        text-align: left; /* Aseguramos que el texto no se centre */
+    }
+
+    .cards-container {
+        width: 100%;
+        align-items: flex-start;
+    }
+
+    .card {
+        width: 90%;
+        text-align: left;
+    }
+}
+
+@media (max-width: 768px) {
+    .product-section {
+        padding: 40px 5%;
+    }
+
+    .step-number {
+        font-size: 28px;
+        margin-bottom: 100px;
+        text-align: left;
+    }
+
+    .step-title {
+        font-size: 28px;
+        text-align: left;
+    }
+
+    .step-text {
+        font-size: 15px;
+        text-align: left;
+    }
+}
