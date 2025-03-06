@@ -21,16 +21,13 @@ const FooterComponent = () => {
           <div className="footer-column">
             <h3>SOCIAL</h3>
             <ul>
-              <li><a href="#">LinkedIn</a></li>
-              <li><a href="#">Facebook</a></li>
+              <li><a href="#">Tiktok</a></li>
               <li><a href="#">Instagram</a></li>
             </ul>
           </div>
           <div className="footer-column">
             <h3>CONTACT</h3>
-            <p>Info@mysite.com</p>
-            <p>123-456-7890</p>
-            <p>500 Terry Francine Street, San Francisco, CA 94158</p>
+            <p>contact@astralpet.es</p>
           </div>
           <div className="footer-column">
             <h3>POLICY</h3>
@@ -41,7 +38,7 @@ const FooterComponent = () => {
             </ul>
           </div>
         </div>
-        <p className="footer-note">©Astralpet. Built on <a href="#">Wix Studio</a></p>
+        <p className="footer-note">©Astralpet LLC.</p>
       </div>
     </footer>
   );
