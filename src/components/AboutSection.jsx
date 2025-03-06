@@ -12,7 +12,7 @@ export default function AboutUs() {
         <p className="about-text">
           Al principio nos costó adaptarnos a nuestro perro de acogida, lo probé todo hasta que descubrí su carta astral. Desde entonces dejé de luchar contra él y empecé a adaptarme. Cambié su rutina, ajusté mi manera de comunicarme… y poco a poco, todo cambió. Donde antes había frustración, ahora había comprensión y unión entre nosotros.
         </p>
-        <button className="about-button">Pide la tuya</button>
+        <button className="about-button" onClick={() => window.open("https://form.typeform.com/to/RknAmWzy", "_blank")}>Pide la tuya</button>
       </div>
     </section>
   );

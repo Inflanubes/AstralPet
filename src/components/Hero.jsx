@@ -18,7 +18,7 @@ export default function Hero() {
           Con nuestra Carta Astral para Mascotas, descubrirás su personalidad, sus necesidades emocionales y la
           conexión única que comparte contigo a través de la astrología.
         </p>
-        <button className="cta-button">
+        <button className="cta-button" onClick={() => window.open("https://form.typeform.com/to/RknAmWzy", "_blank")}>
           ¡Pídela ya! <span className="cta-arrow">➜</span>
         </button>
       </div>

@@ -47,20 +47,12 @@ export default function ProductSection() {
       const lastCard = cardsContainerRef.current.lastElementChild;
       const lastCardBottom = lastCard.getBoundingClientRect().bottom;
 
-      // Fijar solo la parte del texto mientras haya tarjetas
       if (sectionTop <= 0 && lastCardBottom > window.innerHeight) {
         setIsTextFixed(true);
-      } 
-      // Cuando la última tarjeta llega arriba, desbloquear el texto
-      else if (lastCardBottom <= window.innerHeight) {
-        setIsTextFixed(false);
-      } 
-      // Si volvemos a hacer scroll arriba, permitir que se mueva el texto
-      else {
+      } else {
         setIsTextFixed(false);
       }
 
-      // Calcular qué tarjeta está activa
       const containerHeight = cardsContainerRef.current.offsetHeight;
       const index = Math.min(
         steps.length - 1,
@@ -86,7 +78,10 @@ export default function ProductSection() {
         <p className="description">
           Ahora solo tienes que imprimirlo o guardarlo y sobre todo… ¡No olvides seguir nuestros consejos de cuidados!
         </p>
-        <button className="cta">¡Pídela ya!</button>
+        {/* Botón modificado para abrir el enlace */}
+        <button className="cta" onClick={() => window.open("https://form.typeform.com/to/RknAmWzy", "_blank")}>
+          ¡Pídela ya!
+        </button>
       </div>
 
       {/* Tarjetas, estas siguen su scroll normal */}
