@@ -12,7 +12,7 @@ html, body {
     background-color: white;
     max-width: none; /* Elimina la restricción de 1200px */
     margin: 0; /* Elimina el margen izquierdo que desplazaba la sección */
-    padding: 0 3vw; /* Reduce el espacio interno para minimizar el margen izquierdo de la imagen */
+    
     z-index: 1;
     
     
@@ -24,8 +24,6 @@ html, body {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    overflow: hidden;
-    
 }
 
 .text-content {
@@ -110,27 +108,79 @@ html, body {
     display: none; /* Oculta la imagen para usar solo el fondo */
 }
 
-@media (max-width: 768px) {
-    .new-section {
-        flex-direction: column-reverse; /* Invierte el orden */
-        align-items: center; /* Centra el contenido */
+@media (max-width: 1024px) { /* TABLETS */
+    .about-product-section {
+        flex-direction: column; /* Apila el contenido */
+        align-items: center;
+        text-align: center;
+        width: 100vw;
+
     }
 
     .left-content {
         width: 100%; /* Asegura que ocupe todo el ancho */
         order: 2; /* Lo coloca después */
-        text-align: start; /* Alinea el texto */
+        text-align: center; /* Alinea el texto */
     }
 
     .right-content {
-        width: 100%; /* Se ajusta al ancho */
-        height: auto; /* Evita problemas con el tamaño */
-        order: 1; /* Lo coloca antes */
+        width: 100%;
+        order: 1;
+        height: auto;
+        height: 100vh; /* Mantiene la altura correcta */
+        background-image: url("https://res.cloudinary.com/dflvexboa/image/upload/v1741198507/AstralPetWeb/hcjxofg15mtbpxjb0nph.png"); /* Asegura que el fondo siempre se use */
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-left: 0%;
+
+
     }
 
     .fixed-image img {
-        width: 100%; /* Hace que la imagen cubra el contenedor */
-        height: auto; /* Mantiene la proporción */
+        display: block;
+        width: 80%;
+        max-width: 450px;
+        height: auto;
+        display: none !important; /* 🔹 Oculta la imagen del JSX */
+    }
+}
+
+@media (max-width: 767px) { /* MÓVILES GRANDES */
+    .about-product-section {
+        padding: 30px 5%;
+    }
+
+    .left-content {
+        text-align: center;
+    }
+
+    .fixed-image img {
+        width: 90%;
+        max-width: 380px;
+    }
+}
+
+@media (max-width: 480px) { /* MÓVILES PEQUEÑOS */
+    .about-product-section {
+        padding: 20px 3%;
+    }
+
+    .left-content {
+        font-size: 0.9rem;
+    }
+
+    .fixed-image img {
+        width: 95%;
+        max-width: 300px; /* Reduce la imagen en móviles pequeños */
+    }
+
+    .carda {
+        width: 100%; /* Evita que las tarjetas se salgan */
+        text-align: center;
     }
 }
 
