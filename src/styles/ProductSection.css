@@ -50,8 +50,10 @@
 
 /* Estilos de cada tarjeta */
 .card {
-    width: 475px;
-    height: 395px;
+    width: auto;
+    max-width: 475px;
+    height: auto;
+    max-height: 395px;
     border-radius: 10px;
     padding: 20px;
     transition: transform 0.3s ease, opacity 0.3s ease;
