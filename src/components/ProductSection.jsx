@@ -91,8 +91,6 @@ export default function ProductSection() {
             key={step.id}
             className={`card ${step.color} ${step.textColor} ${index === activeIndex ? "opaque" : "translucent"}`}
             style={{
-              width: "475px",
-              height: "290px",
               transform: `translateY(${Math.max(0, (activeIndex - index) * 100)}px)`,
               position: index === activeIndex ? "sticky" : "relative",
               top: index === activeIndex ? "120px" : "auto",
