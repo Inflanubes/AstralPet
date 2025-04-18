@@ -42,3 +42,14 @@ git push origin gh-pages
 
 # 9. Limpieza (opcional)
 rm -rf ../dist-temp
+
+✅ Resumen rápido
+Modificas en dev.
+
+Generas el build (npm run build).
+
+Copias ese build a gh-pages en la raíz del proyecto.
+
+Haces commit y push en gh-pages.
+
+¡Tu sitio en https://astralpet.es se actualizará!
