@@ -10,3 +10,22 @@ Currently, two official plugins are available:
 ## Expanding the ESLint configuration
 
 If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+Publicar cambios:
+
+# Estar en la rama de desarrollo
+git checkout dev
+
+# Generar build de producción
+npm run build
+
+# Copiar y publicar en gh-pages manualmente
+cp -r dist ../dist-temp
+git checkout gh-pages
+rm -rf dist
+cp -r ../dist-temp dist
+echo 'astralpet.es' > dist/CNAME
+git add dist -f
+git commit -m "Actualiza build"
+git push origin gh-pages
+rm -rf ../dist-temp
