@@ -38,6 +38,5 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
           publish_branch: gh-pages
-          force: true
           commit_message: "🚀 Publicación automática desde main"
 
