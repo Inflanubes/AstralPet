@@ -21,8 +21,7 @@ const FooterComponent = () => {
           <div className="footer-column">
             <h3>SOCIAL</h3>
             <ul>
-              <li><a href="#">Tiktok</a></li>
-              <li><a href="#">Instagram</a></li>
+              <li><a href="https://www.instagram.com/astralpes">Instagram</a></li>
             </ul>
           </div>
           <div className="footer-column">

@@ -52,7 +52,7 @@
   }
   
   .footer-column ul li a:hover {
-    text-decoration: underline;
+    color: #bdbdff;
   }
   
   .footer-note {
@@ -68,6 +68,8 @@
   
   .footer-note a:hover {
     text-decoration: underline;
+    color: #bdbdff !important; /* Ahora cambia de color en hover */
+
   }
   
   /* Responsive Design */
