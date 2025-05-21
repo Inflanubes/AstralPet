@@ -1,0 +1,73 @@
+/* legal.css */
+
+.legal-wrapper {
+  padding: 2rem;
+  max-width: 800px;
+  margin: auto;
+  background-color: #ffffff;
+  color: #1f1f1f;
+  font-family: 'Arial', sans-serif;
+}
+
+.legal-wrapper h1 {
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  color: #0f3b34; /* Verde oscuro de la cabecera */
+}
+
+.legal-wrapper h4 {
+  margin-top: 2rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #00334e; /* Azul petróleo como en “Influencia de los planetas” */
+}
+
+.legal-wrapper p {
+  line-height: 1.7;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.legal-wrapper a {
+  color: #0d6efd;
+  text-decoration: none;
+}
+
+.legal-wrapper a:hover {
+  text-decoration: underline;
+}
+
+/* Colores inspirados en los elementos visuales de la carta astral */
+
+.signo-solar {
+  color: #198f81; /* Verde turquesa */
+}
+
+.ascendente {
+  color: #c49fe3; /* Lila claro */
+}
+
+.planetas {
+  color: #00334e; /* Azul petróleo */
+}
+
+.recomendaciones {
+  color: #d29200; /* Mostaza / Naranja suave */
+}
+
+/* Botón atrás (para mantener consistencia con Legal.jsx) */
+.btn-back {
+  background-color: #0f3b34;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border: none;
+  margin-top: 2rem;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-back:hover {
+  background-color: #125144;
+}

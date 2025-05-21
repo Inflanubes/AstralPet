@@ -37,7 +37,7 @@ const FooterComponent = () => {
             </ul>
           </div>
         </div>
-        <p className="footer-note">©Astralpet LLC.</p>
+        <p className="footer-note">©Be Banana LLC.</p>
       </div>
     </footer>
   );
