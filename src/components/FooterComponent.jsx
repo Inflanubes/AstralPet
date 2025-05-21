@@ -31,9 +31,9 @@ const FooterComponent = () => {
           <div className="footer-column">
             <h3>POLICY</h3>
             <ul>
-              <li><a href="#">Terms & Conditions</a></li>
-              <li><a href="#">Privacy Policy</a></li>
-              <li><a href="#">Accessibility Statement</a></li>
+              <li><a href="/Terms">Términos y Condiciones</a></li>
+              <li><a href="/Privacy">Política de Privacidad</a></li>
+              <li><a href="/Legal">Aviso Legal</a></li>
             </ul>
           </div>
         </div>
