@@ -41,7 +41,7 @@ export default function CustomSection() {
           <p>
             Pide ya la carta astral personalizada de tu mascota y pon nuestros consejos en práctica. Cuida de tu mayor tesoro de la manera más adecuada a su personalidad.
           </p>
-          <button className="cta-button" onClick={() => window.open("https://form.typeform.com/to/RknAmWzy", "_blank")}>Cómprala ya <span>&#10132;</span></button>
+          <button className="cta-button" onClick={() => window.open("https://buy.stripe.com/bIY8zQ82t0rr0ec288", "_blank")}>Cómprala ya <span>&#10132;</span></button>
         </div>
       </div>
     </section>

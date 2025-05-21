@@ -79,7 +79,7 @@ export default function ProductSection() {
           Ahora solo tienes que imprimirlo o guardarlo y sobre todo… ¡No olvides seguir nuestros consejos de cuidados!
         </p>
         {/* Botón modificado para abrir el enlace */}
-        <button className="cta" onClick={() => window.open("https://form.typeform.com/to/RknAmWzy", "_blank")}>
+        <button className="cta" onClick={() => window.open("https://buy.stripe.com/bIY8zQ82t0rr0ec288", "_blank")}>
           ¡Pídela ya!
         </button>
       </div>
