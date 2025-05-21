@@ -1,5 +1,5 @@
 import React from 'react';
-import "../../styles/legal.css";
+import "../styles/legal.css";
 
 export const Legal = () => {
   return (
@@ -31,12 +31,6 @@ export const Legal = () => {
       </p>
 
       <p className="mt-4"><strong>Última actualización:</strong> Mayo 2025</p>
-      <button
-        className="btn btn-dark mt-4"
-        onClick={() => window.history.back()}
-        >
-        Volver atrás
-      </button>
     </div>
   );
 };
